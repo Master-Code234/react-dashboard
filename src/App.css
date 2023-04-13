@@ -1,38 +1,65 @@
-.App {
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.4fr;
+  grid-gap: 2rem;
+  padding: 3rem;
+  color: aliceblue;
+  grid-template-areas:
+    "sidebar reviews ratings analysis "
+    "sidebar visitors visitors visitors";
+  background-color: rgba(58, 16, 184, 0.468);
+  
+  
+}
+
+.analysis {
+  line-height: 2rem;
+  background-color: rgb(30, 105, 204);
+  grid-area: analysis;
+}
+
+.analysis-title {
+  text-align: center;
+}
+.data-items {
+  margin-left: 3rem;
+}
+
+.ratings {
+  background-color: aquamarine;
+  grid-area: ratings;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.reviews {
+  text-align: center;
+  min-height: 20rem;
+  max-height: 40rem;
+  background-color: #61dafb;
+  grid-area: reviews;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-bar {
+  background-color: blueviolet;
+  grid-area: sidebar;
+  font-size: large;
+  line-height: 4;
+}
+.sidebar-list {
+  margin: 10rem auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.visitors {
+  background-color: rgb(7, 28, 67);
+  grid-area: visitors;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data-items,
+.sidebar-list {
+  list-style: none;
 }
